@@ -11,12 +11,30 @@ if [[ "$(id -u)" -eq 0 ]]; then
 		apt install -y \
 			dnsutils \
 			nmap \
+			libgl1-mesa-glx \
+			libegl1-mesa \
+			libxrandr2 \
+			libxrandr2 \
+			libxss1 \
+			libxcursor1 \
+			libxcomposite1 \
+			libasound2 \
+			libxi6 \
+			libxtst6 \
+			python3 \
+			
 			
 	else 
 		echo "Unable to find apt"
-		exit
+		exit 1
 	fi	
 else
     echo "You are not root." 1>&2
-    exit
+    exit 1
 fi
+
+git_config() {                                          # picked this method from Matt Kajowski
+  git config --global user.email "bobo77b0.7@gmail.com"
+  git config --global user.name "William Harvey"
+}
+export -f git_config
