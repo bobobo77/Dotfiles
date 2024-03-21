@@ -24,7 +24,7 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			python3 \
 			python3-pip
 		echo "Installed all packages"
-		curl -O https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+		curl -O ~/Downloads https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
 		echo "downloaded Anaconda"
 	else 
