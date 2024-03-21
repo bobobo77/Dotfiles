@@ -21,9 +21,10 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			libasound2 \
 			libxi6 \
 			libxtst6 \
-			python3 
-			
-		curl -O https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh	
+			python3 \
+			python3-pip
+		curl -O https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
 	else 
 		echo "Unable to find apt"
 		exit 1
