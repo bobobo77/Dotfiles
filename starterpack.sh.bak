@@ -31,7 +31,7 @@ if [[ "$(id -u)" -eq 0 ]]; then
 		echo "Unable to find apt"
 		exit 1
 	fi
-	curl https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O
+	curl -o /~ https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh 
 		
 		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
 		echo "downloaded Anaconda"
@@ -39,7 +39,8 @@ if [[ "$(id -u)" -eq 0 ]]; then
   git config --global user.email "bobo77b0.7@gmail.com"
   git config --global user.name "William Harvey"
   git config --global core.editor vim 
-	
+	echo "adding something fun"
+	pip3 install thefuck --user
 else
     echo "You are not root." 1>&2
     exit 1
