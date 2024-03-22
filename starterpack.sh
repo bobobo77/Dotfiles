@@ -25,12 +25,7 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			python3-pip \
 			python3-setuptools 
 		echo "Installed all packages"
-<<<<<<< HEAD
-	
-=======
-		
-		
->>>>>>> efe632010661e9fd5c8d4bc9e83c1ebdffc26e9d
+
 	else 
 		echo "Unable to find apt"
 		exit 1
@@ -43,18 +38,17 @@ if [[ "$(id -u)" -eq 0 ]]; then
   git config --global user.email "bobo77b0.7@gmail.com"
   git config --global user.name "William Harvey"
   git config --global core.editor vim 
-<<<<<<< HEAD
+
   ln -sfb ~/git/dotfiles/.bashrc ~/.bashrc
   ln -sfb ~/git/dotfiles/.vimrc ~/.vimrc
   mkdir -p ~/.ssh/
   mkdir -p ~/.singularity/
   ln -sfb ~/git/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
   ln -sfb ~/git/dotfiles/.ssh/config ~/.ssh/config
-	
-=======
+
 	echo "adding something fun"
 	pip3 install thefuck --user
->>>>>>> efe632010661e9fd5c8d4bc9e83c1ebdffc26e9d
+
 else
     echo "You are not root." 1>&2
     exit 1
