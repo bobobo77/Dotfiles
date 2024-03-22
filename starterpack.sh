@@ -22,21 +22,28 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			libxi6 \
 			libxtst6 \
 			python3 \
-			python3-pip
+			python3-pip \
+			python3-setuptools 
 		echo "Installed all packages"
+<<<<<<< HEAD
 	
+=======
+		
+		
+>>>>>>> efe632010661e9fd5c8d4bc9e83c1ebdffc26e9d
 	else 
 		echo "Unable to find apt"
 		exit 1
 	fi
-	curl https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O
+	curl -o ~ https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh 
 		
-		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
+		bash ~/Anaconda3-2024.02-1-Linux-x86_64.sh
 		echo "downloaded Anaconda"
 	echo "Setting git configs"
   git config --global user.email "bobo77b0.7@gmail.com"
   git config --global user.name "William Harvey"
   git config --global core.editor vim 
+<<<<<<< HEAD
   ln -sfb ~/git/dotfiles/.bashrc ~/.bashrc
   ln -sfb ~/git/dotfiles/.vimrc ~/.vimrc
   mkdir -p ~/.ssh/
@@ -44,6 +51,10 @@ if [[ "$(id -u)" -eq 0 ]]; then
   ln -sfb ~/git/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
   ln -sfb ~/git/dotfiles/.ssh/config ~/.ssh/config
 	
+=======
+	echo "adding something fun"
+	pip3 install thefuck --user
+>>>>>>> efe632010661e9fd5c8d4bc9e83c1ebdffc26e9d
 else
     echo "You are not root." 1>&2
     exit 1
