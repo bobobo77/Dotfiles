@@ -24,11 +24,7 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			python3 \
 			python3-pip
 		echo "Installed all packages"
-		
-		curl https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O
-		
-		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
-		echo "downloaded Anaconda"
+	
 	else 
 		echo "Unable to find apt"
 		exit 1
@@ -41,6 +37,12 @@ if [[ "$(id -u)" -eq 0 ]]; then
   git config --global user.email "bobo77b0.7@gmail.com"
   git config --global user.name "William Harvey"
   git config --global core.editor vim 
+  ln -sfb ~/git/dotfiles/.bashrc ~/.bashrc
+  ln -sfb ~/git/dotfiles/.vimrc ~/.vimrc
+  mkdir -p ~/.ssh/
+  mkdir -p ~/.singularity/
+  ln -sfb ~/git/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
+  ln -sfb ~/git/dotfiles/.ssh/config ~/.ssh/config
 	
 else
     echo "You are not root." 1>&2
