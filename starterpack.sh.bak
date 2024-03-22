@@ -24,18 +24,29 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			python3 \
 			python3-pip
 		echo "Installed all packages"
+		
 		curl https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O
-		mv Anaconda3-2024-2024.02-1-Linux-x86_64.sh ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
+		
 		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
 		echo "downloaded Anaconda"
 	else 
 		echo "Unable to find apt"
 		exit 1
-	fi	
+	fi
+	anaconda_setup
+	git_config
+	
 else
     echo "You are not root." 1>&2
     exit 1
 fi
+
+anaconda_setup(){
+	curl https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O
+		
+		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
+		echo "downloaded Anaconda"
+}
 
 git_config() {                                          # picked this method from Matt Kajowski
 	echo "Setting git configs"
@@ -45,3 +56,9 @@ git_config() {                                          # picked this method fro
 }
 
 export -f git_config
+
+vundle_setup() {
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	
+
+}
