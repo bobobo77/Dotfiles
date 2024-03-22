@@ -22,13 +22,11 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			libxi6 \
 			libxtst6 \
 			python3 \
-			python3-pip
+			python3-pip \
+			python3-setuptools 
 		echo "Installed all packages"
 		
-		curl https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O
 		
-		bash ~/Downloads/Anaconda3-2024.02-1-Linux-x86_64.sh
-		echo "downloaded Anaconda"
 	else 
 		echo "Unable to find apt"
 		exit 1
