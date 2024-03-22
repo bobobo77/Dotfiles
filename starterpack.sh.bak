@@ -22,7 +22,8 @@ if [[ "$(id -u)" -eq 0 ]]; then
 			libxi6 \
 			libxtst6 \
 			python3 \
-			python3-pip
+			python3-pip \
+			python3-setuptools 
 		echo "Installed all packages"
 		
 		
