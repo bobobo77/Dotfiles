@@ -31,9 +31,8 @@ if [[ "$(id -u)" -eq 0 ]]; then
 		echo "Unable to find apt"
 		exit 1
 	fi
-	(cd ~; curl -o ~ https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh )
+	(cd ~; curl -o ~ https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh ; bash ~/Anaconda3-2024.02-1-Linux-x86_64.sh ) #command in subshell to remain in Dotfiles afterthe curl
 		
-		bash ~/Anaconda3-2024.02-1-Linux-x86_64.sh
 		echo "downloaded Anaconda"
 	echo "Setting git configs"
   git config --global user.email "bobo77b0.7@gmail.com"
@@ -41,14 +40,10 @@ if [[ "$(id -u)" -eq 0 ]]; then
   git config --global core.editor vim 
 	echo "adding something fun"
 	pip3 install thefuck --user
+	(cd ~; git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim)
 else
     echo "You are not root." 1>&2
     exit 1
 fi
 
 
-vundle_setup() {
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	
-
-}
