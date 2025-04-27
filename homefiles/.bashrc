@@ -5,6 +5,7 @@ alias l='ls -lAh'
 
 
 # copied directly from "The Ultimate Badass .bashrc file"
+# Copy file with a progress bar
 
 cpp()
 {
