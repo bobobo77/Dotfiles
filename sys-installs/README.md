@@ -1,11 +1,11 @@
 This shell script is to install software to an ubuntu machine. 
 The current software package list is :
 
-Ansible
+Anaconda
 
 
 Sources: 
  https://www.2daygeek.com/find-out-if-package-is-installed-or-not-in-linux-unix/
- https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html 
+ https://www.anaconda.com/docs/getting-started/anaconda/install#macos-linux-installation:manual-shell-initialization
+ https://www.anaconda.com/docs/getting-started/anaconda/advanced-install/silent-mode#mac-os-linux
  https://github.com/mkijowski/dotfiles/blob/master/install.sh
- https://stackoverflow.com/questions/1298066/how-can-i-check-if-a-package-is-installed-and-install-it-if-not
