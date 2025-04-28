@@ -1,10 +1,10 @@
-# Dotfiles
-Bobobo77 user dotfile for starting configurations
- Sources used include: 
- https://docs.anaconda.com/free/working-with-conda/configurations/python-path/
+This directory is used to install packages for ubuntu through various dotfiles depending on what is needed 
+for a new device. The three folders are for:
+
+ vim-config - Vim configuration
+
+ homefiles - a series of additional utilities and aliases for the .bashrc file 
+
+ sys-installs - packages and downloadables to install on a machine
+
  
- https://github.com/mkijowski/dotfiles/blob/master/install.sh
- 
- https://github.com/nvbn/thefuck/tree/master 
- 
- https://github.com/VundleVim/Vundle.vim 
